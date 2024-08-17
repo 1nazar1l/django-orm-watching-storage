@@ -1,0 +1,9 @@
+__pycache__
+.cache
+.pythonlibs
+.upm
+.env
+.replit
+poetry.lock
+pyproject.toml
+replit_zip_error_log.txt
