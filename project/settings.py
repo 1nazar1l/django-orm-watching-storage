@@ -6,20 +6,20 @@ env.read_env()
 
 DATABASES = {
     'default': {
-        'DB_ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'DB_HOST': env.str('HOST'),
-        'DB_PORT': env.int('PORT'),
-        'DB_NAME': env.str('NAME'),
-        'DB_USER': env.str('USER'),
-        'DB_PASSWORD': env.str('PASSWORD'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'HOST': env.str('DB_HOST'),
+        'PORT': env.int('DB_PORT'),
+        'NAME': env.str('DB_NAME'),
+        'USER': env.str('DB_USER'),
+        'PASSWORD': env.str('DB_PASSWORD'),
     }
 }
 
 INSTALLED_APPS = ['datacenter']
 
-SECRET_KEY = env.str('SECRET_KEY')
+SECRET_KEY = env.str('DB_SECRET_KEY')
 
-DEBUG = env.bool('DEBUG')
+DEBUG = env.bool('DB_DEBUG')
 
 ROOT_URLCONF = 'project.urls'
 
